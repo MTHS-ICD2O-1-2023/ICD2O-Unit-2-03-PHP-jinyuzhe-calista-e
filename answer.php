@@ -28,23 +28,14 @@
           <img src="./images/street.jpg" alt="laptop image" width="250" />
         </div>
         <div class="page-content-php">
-          <form action="answer.php" method="POST">
-            <p>Street Name</p>
-            <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type="text" name="street-name">
-              <label class="mdl-textfield__label" for="name-input">Street Name here ...</label>
-            </div>
-            <br />
-            <p>Street Number</p>
-            <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="street-number">
-              <label class="mdl-textfield__label" for="age-input">Street Number here ...</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <br />
-            <!-- Accent-colored raised button with ripple -->
-            <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-          </form>
+          <div id="user-info">
+            <?php
+              $streetName = $_POST["street-name"];
+              $streetNumber = $_POST["street-number"];
+  
+              echo "Your info is: " . $streetNumber . "," . $streetName . ".";
+            ?>
+          </div>
         </div>
       </main>
     </div>
